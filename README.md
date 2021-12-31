@@ -7,6 +7,57 @@ Receipt scanner extracts information from your PDF or image receipts.
 [![Codecov](https://img.shields.io/codecov/c/github/danschultzer/receipt-scanner/master.svg)](https://codecov.io/gh/danschultzer/receipt-scanner)
 [![David](https://img.shields.io/david/danschultzer/receipt-scanner/master.svg)](https://david-dm.org/danschultzer/receipt-scanner)
 
+## Install on Windows 10
+
+https://github.com/nodejs/node-gyp#on-windows
+
+Download and install:
+https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools
+
+#npm config set msvs_version 2017
+
+npm config set msvs_version 2019
+
+
+#Download OpenCV binary from:
+
+https://github.com/peterbraden/node-opencv
+
+https://opencv.org/releases/
+
+Choose Windows - Is 218 MB. https://sourceforge.net/projects/opencvlibrary/files/4.5.4/opencv-4.5.4-vc14_vc15.exe/download
+
+
+#Define environment varialbe in windows 10 using Windows start ->  omgevingsvariabelen
+set OPENCV_DIR=d:\OpenCV\build\x64\vc12
+
+
+Still not working - Now trying:
+
+I couldn't find my solution anywhere else, so thought I'd share.
+
+Running node v10.16.3 on Windows 10
+
+Install windows-build-tools -
+
+npm install --global --production windows-build-tools
+Set the python path explicitly in C:\Users[your username].npmrc - In my case, this is like so:
+
+python=c:\users\akeel\.windows-build-tools\python27\python
+Share
+Improve this answer
+Follow
+answered Aug 21 '19 at 8:53
+
+Akeel
+10144 bronze badges
+Add a comment
+
+python=c:\users\marti\.windows-build-tools\python27\python
+
+
+
+
 ## Example
 
 ```
